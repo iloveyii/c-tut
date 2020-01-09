@@ -41,6 +41,7 @@ In this repo we are practicing C. We will cover all the important topics.
 ## Array pointer
 Array is a special type of data structure in C.
 ```c
+    // Declare and initialize array
     int A[3] = {11,22,33};
     // This is a pointer to the array
     int * ptr = &A[0]; // or simply A
