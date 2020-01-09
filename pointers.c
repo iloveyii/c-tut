@@ -1,8 +1,11 @@
 #include<stdio.h>
 
+/**
+This is a small program to demonstrate all about pointers in short
+**/
 int main(void) {
-    // This is a pointer to int variable
     int x = 123;
+    // This is a pointer to int variable
     int * ptr = &x;
     // & is address of operator - to get the memory location on any bucket
     // * is content of operator - to the value of location where address (ptr) is pointing
