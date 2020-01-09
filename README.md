@@ -39,6 +39,11 @@ In this repo we are practicing C. We will cover all the important topics.
   * As we said in the start of this section that there are two types of buckets, hence if we try to save address of memory location we need to use address operator `&` and to declare such variable its must have star like `int* ptr`
 
 ## Array pointer
+Array is a special type of data structure in C.
+  * It saves several values in adjacent locations like the shape of a ladder
+  * It implements Iterative interface which means its elements can be accessed using A[i] notation
+  * `A` is a pointer in itself and we can add increments to it to get values at different indices
+  * To get address of index A[i] use address of operator like `&A[i]`
 
 
 ## How to work with Makefile
