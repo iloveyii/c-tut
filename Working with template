@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+/*Program for declaring a template type T and passing int, float, string as a generic types*/
+
+
+template<typename T> /*Decelaring template*/
+
+void Print (T value)
+
+{
+std::cout << value <<std::endl; 
+}
+
+//void Print ( int value)
+//{
+//std::cout << value << endl;
+//}
+
+
+int main()
+{
+
+std::cout << "Enter integer to print" << endl;	
+std::cin.get(); 
+Print(5);
+Print("Hello");
+
+	}
+	  
+
