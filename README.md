@@ -6,7 +6,7 @@ In this repo we are practicing C. We will cover all the important topics.
 ## Installations
   * Clone the repo `https://github.com/iloveyii/c-tut/`.
   * Run the script as 
-```bash
+```c
    gcc pointers.c && ./a.out
 ``` 
 
@@ -17,7 +17,7 @@ In this repo we are practicing C. We will cover all the important topics.
   * To understand the concept of pointers better let say that there are two types of buckets that hold any value in C.
   * The first type of bucket is saving any data type in C.
   * The second type is a bucket that holds address of a memory location.
- ```bash
+ ```c
     int x = 123; // bucket loc is 802
     int * ptr = &x; // bucket loc is 806
 ```
@@ -40,6 +40,11 @@ In this repo we are practicing C. We will cover all the important topics.
 
 ## Array pointer
 Array is a special type of data structure in C.
+```c
+    int A[3] = {11,22,33};
+    // This is a pointer to the array
+    int * ptr = &A[0]; // or simply A
+```
   * It saves several values(of same data type) in adjacent locations like the shape of a ladder
   * It implements Iterative interface which means its elements can be accessed using A[i] notation
   * `A` is a pointer in itself and we can add increments to it to get values at different indices
