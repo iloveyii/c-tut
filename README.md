@@ -7,7 +7,7 @@ In this repo we are practicing C. We will cover all the important topics.
   * Clone the repo `https://github.com/iloveyii/c-tut/`.
   * Run the script as 
 ```bash
-   gcc pointers.c
+   gcc pointers.c && ./a.out
 ``` 
 
 
