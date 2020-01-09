@@ -14,3 +14,11 @@ In this repo we are practicing C. We will cover all the important topics.
 ## Arrays
 
 ## Pointers 
+
+## Array pointer
+
+
+## How to work with Makefile
+
+
+## Using templates in C
