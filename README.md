@@ -44,7 +44,10 @@ Array is a special type of data structure in C.
   * It implements Iterative interface which means its elements can be accessed using A[i] notation
   * `A` is a pointer in itself and we can add increments to it to get values at different indices
   * To get address of index A[i] use address of operator like `&A[i]`
+  
   * First element of A is  `A[0]`
+  * First element of A where ptr is pointing to is `*ptr`
+  
   * Second element of A is ` A[1]`
   * Second element of A is ` *(ptr + 1) `
 
