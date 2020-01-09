@@ -18,8 +18,8 @@ In this repo we are practicing C. We will cover all the important topics.
   * The first type of bucket is saving any data type in C.
   * The second type is a bucket that holds address of a memory location.
  ```bash
-    int x = 123;
-    int * ptr = &x;
+    int x = 123; // bucket loc is 802
+    int * ptr = &x; // bucket loc is 806
 ```
 
   * In the above code snippet x is simply an integer variable (bucket) holding value 123.
@@ -31,6 +31,13 @@ In this repo we are practicing C. We will cover all the important topics.
   * The important point is that each bucket (location) in the figure above has address (as it is RAM)
   * The bucket (memory location) where x is stored has address `0802` and ptr is point it.
   * This location can be accessed by two ways, using `x` or pointer `ptr` which is equal to `&x`
+  * At the same time we can save the address of (bucket) ptr as well like `ìnt **ptr2`
+  
+  * To access the content in bucket where ptr is pointing to use content operator `*ptr`
+  * To access the content in bucket where ptr2 is pointing to use content operator `*ptr2`
+  * To access the content where ptr2 is pointing, and then where that value (address) is pointing to `**ptr2`, this is also called double indirection.
+  * As we said in the start of this section that there are two types of buckets, hence if we try to save address of memory location we need to use address operator `&` and to declare such variable its must have star like `int* ptr`
+
 ## Array pointer
 
 
