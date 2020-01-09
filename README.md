@@ -29,7 +29,7 @@ In this repo we are practicing C. We will cover all the important topics.
   ![pointers](https://github.com/iloveyii/c-tut/blob/master/images/pointers-a-ptr.png)
   
   * The important point is that each bucket (location) in the figure above has address (as it is RAM)
-  * The bucket (memory location) where x is stored has address `0802` and ptr is point it.
+  * The bucket (memory location) where x is stored has address `0802` and ptr is pointing to it.
   * This location can be accessed by two ways, using `x` or pointer `ptr` which is equal to `&x`
   * At the same time we can save the address of (bucket) ptr as well like `ìnt **ptr2`
   
