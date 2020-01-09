@@ -22,6 +22,13 @@ In this repo we are practicing C. We will cover all the important topics.
     int * ptr = &x;
 ```
 
+  * In the above code snippet x is simply an integer variable (bucket) holding value 123.
+  * *ptr is a variable (bucket) holding the address(*) of a variable of data type integer (int).
+  * This can be visualized in the figure below.
+  
+  ![pointers](https://github.com/iloveyii/c-tut/blob/master/images/pointers-a-ptr.png)
+  
+  
 ## Array pointer
 
 
