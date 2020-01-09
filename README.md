@@ -40,7 +40,7 @@ In this repo we are practicing C. We will cover all the important topics.
 
 ## Array pointer
 Array is a special type of data structure in C.
-  * It saves several values in adjacent locations like the shape of a ladder
+  * It saves several values(of same data type) in adjacent locations like the shape of a ladder
   * It implements Iterative interface which means its elements can be accessed using A[i] notation
   * `A` is a pointer in itself and we can add increments to it to get values at different indices
   * To get address of index A[i] use address of operator like `&A[i]`
