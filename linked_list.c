@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include <stdlib.h>
-
+#define ASC_ORDER false // mean last node at end
 /**
 This is a small program to demonstrate a linked list
 **/
@@ -29,10 +29,13 @@ void printlist(node_t *head) {
 
 node_t *add_new_node(node_t *head, int value) {
     node_t *tmp = create_new_node(value);
-    /*
-    // head printed first
-    tmp->next = head;
-    head = tmp; */
+
+    if(ASC_ORDER == false) {
+        // head printed first
+        tmp->next = head;
+        head = tmp;
+        return head;
+    }
 
     // head printed last
     if( head != NULL) {
@@ -43,7 +46,6 @@ node_t *add_new_node(node_t *head, int value) {
         last->next = tmp;
         return head;
     }
-
     // This was first node
     return tmp;
 }
