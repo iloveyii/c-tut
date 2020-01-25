@@ -85,3 +85,28 @@ greater(7.1,30.2)
 A linked list is chain like structure in which the previous one points to the next one. It is usually created by 
 using struct in C containg two elements i.e value and next pointer. The value contains any desired value whereas
 the next points to the next node. The *head is used to point to the head of the linked list.
+
+This is a node:
+```c
+struct node {
+    int value;
+    struct node *next;
+};
+typedef struct node node_t; // shortcut for 'struct node'
+```
+
+Create nodes and link them:
+```c
+    node_t n1, n2, n3;
+    node_t *head;
+
+    n1.value = 10;
+    n2.value = 20;
+    n3.value = 30;
+
+    // Make a list of them by linking
+    head = &n3;
+    n3.next = &n2;
+    n2.next = &n1;
+    n1.next = NULL; // end of linked list
+```

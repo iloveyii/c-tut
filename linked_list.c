@@ -5,9 +5,9 @@ This is a small program to demonstrate a linked list
 **/
 struct node {
     int value;
-    struct node * next;
+    struct node *next;
 };
-typedef struct node node_t;
+typedef struct node node_t; // shortcut for 'struct node'
 
 void printlist(node_t *head) {
     node_t *temporary = head;
