@@ -62,3 +62,22 @@ Array is a special type of data structure in C.
 
 
 ## Using templates in C
+ A template is like a dynamic data type that can accept any type of data that you pass at run time.
+ It can be declared as :
+```c
+template <typename T>
+```
+
+Now you can declare any variable of type T.
+```c
+T greater(T a, T b) {
+    return a > b ? a : b;
+}
+```
+
+You can pass any data type to the above function.
+```c
+greater(7,3) 
+greater(7.1,30.2)
+```
+
