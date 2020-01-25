@@ -51,27 +51,22 @@ node_t *add_new_node(node_t *head, int value) {
 }
 
 int main(void) {
-    node_t n1, n2, n3;
-    node_t *head, *tmp;
-    head = NULL;
+    node_t *head = NULL;
+    int value = 0;
 
-    head = add_new_node(head, 10);
-    head = add_new_node(head, 20);
-    head = add_new_node(head, 30);
-    head = add_new_node(head, 40);
-/*
-    n1.value = 10;
-    n2.value = 20;
-    n3.value = 30;
+    while(1) {
+        printf("Enter an integer (0 to exit) : ");
+        scanf("%d", &value);
 
-    // Make a list of them by linking
-    head = &n3;
-    n3.next = &n2;
-    n2.next = &n1;
-    n1.next = NULL; // end of linked list
-*/
-    // print list
-    printlist(head);
+        if(value == 0) {
+            // print list
+            printlist(head);
+            break;
+        } else {
+            head = add_new_node(head, value);
+        }
+    }
+
 
     return 0;
 }
