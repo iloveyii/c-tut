@@ -39,12 +39,10 @@ int main(void) {
     node_t *head, *tmp;
     head = NULL;
 
-    head = create_new_node(10);
-
-    tmp = create_new_node(20);
-    tmp->next = head;
-    head = tmp;
-
+    head = add_new_node(head, 10);
+    head = add_new_node(head, 20);
+    head = add_new_node(head, 30);
+    head = add_new_node(head, 40);
 /*
     n1.value = 10;
     n2.value = 20;
