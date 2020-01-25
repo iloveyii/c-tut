@@ -81,3 +81,7 @@ greater(7,3)
 greater(7.1,30.2)
 ```
 
+## Linked lists in C
+A linked list is chain like structure in which the previous one points to the next one. It is usually created by 
+using struct in C containg two elements i.e value and next pointer. The value contains any desired value whereas
+the next points to the next node. The *head is used to point to the head of the linked list.
