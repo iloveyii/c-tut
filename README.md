@@ -110,3 +110,6 @@ Create nodes and link them:
     n2.next = &n1;
     n1.next = NULL; // end of linked list
 ```
+
+
+## malloc & realloc
