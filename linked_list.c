@@ -29,9 +29,23 @@ void printlist(node_t *head) {
 
 node_t *add_new_node(node_t *head, int value) {
     node_t *tmp = create_new_node(value);
+    /*
+    // head printed first
     tmp->next = head;
-    head = tmp;
-    return head;
+    head = tmp; */
+
+    // head printed last
+    if( head != NULL) {
+        node_t *last = head;
+        while(last->next != NULL) {
+            last = last->next;
+        }
+        last->next = tmp;
+        return head;
+    }
+
+    // This was first node
+    return tmp;
 }
 
 int main(void) {
