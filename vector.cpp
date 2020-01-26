@@ -82,6 +82,20 @@ class Vector {
             return 0;
         }
 
+        int find(int value) {
+            if( head != NULL) {
+                node_t *current = head;
+                while(current->next != NULL) {
+                    if(current->value == value) {
+                        return current->value;
+                    }
+                    current = current->next;
+                }
+            }
+            // Node not found
+            return 0;
+        }
+
 };
 
 int entry() {
@@ -107,6 +121,9 @@ int entry() {
     cout << "The back element is " << v.back() << endl;
     cout << "The at(" << value << ") element is " << v.at(value) << endl;
 
+    printf("Enter a value to find : ");
+    scanf("%d", &value);
+    cout << "The find node is " << v.find(value) << endl;
 }
 
 int main(void) {
@@ -125,4 +142,4 @@ int main(void) {
 
     return 0;
 }
-// RUN from cmd : g++ linked_list.c && ./a.out
+// RUN from cmd : g++ vector.cpp && ./a.out
