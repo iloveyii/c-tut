@@ -115,4 +115,21 @@ Create nodes and link them:
 ```
 
 
+## Vector in C++
+A vector is an array but with dynamic length. It was developed to overcome the shortcomings of static length declarations
+for array. Declare a vector as:
+```cpp
+    Vector v;
+```
+
+The following methods have been implemented:
+```cpp
+    v.add(int a);
+    v.display();
+    v.at(int index);
+    v.front();
+    v.back();
+```
+
+
 ## malloc & realloc
