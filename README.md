@@ -8,6 +8,9 @@ In this repo we are practicing C. We will cover all the important topics.
   * Run the script as 
 ```c
    gcc pointers.c && ./a.out
+   g++ pointers.c && ./a.out
+   g++ -g -o pointers.out pointers.c && ./pointers.out
+   lldb pointers.out
 ``` 
 
 

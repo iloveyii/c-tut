@@ -50,10 +50,41 @@ node_t *add_new_node(node_t *head, int value) {
     return tmp;
 }
 
+node_t *find_node_by_value(node_t *head, int value) {
+    if( head != NULL) {
+        node_t *current = head;
+        while(current->next != NULL) {
+            if(current->value == value) {
+                return current;
+            }
+            current = current->next;
+        }
+    }
+    // Node not found
+    return NULL;
+}
+
+node_t *front(node_t *head) {
+    if(head != NULL) {
+        if(ASC_ORDER == false) {
+            return head;
+        } else {
+            node_t *current = head;
+            while(current->next != NULL) {
+                current = current->next;
+            }
+            return current;
+        }
+    }
+
+    return NULL;
+}
+
 int main(void) {
     node_t *head = NULL;
     int value = 0;
 
+    // Scan a few integers
     while(1) {
         printf("Enter an integer (0 to exit) : ");
         scanf("%d", &value);
@@ -67,6 +98,13 @@ int main(void) {
         }
     }
 
+    printf("Enter an integer to search : ");
+    scanf("%d", &value);
+    node_t *searched = find_node_by_value(head, value);
+    printf("The searched node is : %d \n", searched == NULL ? -1 : searched->value);
+
+    node_t *front_node = front(head);
+    printf("The front node is : %d \n", front_node == NULL ? -1 : front_node->value);
 
     return 0;
 }
