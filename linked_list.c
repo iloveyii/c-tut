@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define ASC_ORDER false // mean last node at end
 /**
 This is a small program to demonstrate a linked list
 **/
@@ -29,25 +28,10 @@ void printlist(node_t *head) {
 
 node_t *add_new_node(node_t *head, int value) {
     node_t *tmp = create_new_node(value);
-
-    if(ASC_ORDER == false) {
-        // head printed first
-        tmp->next = head;
-        head = tmp;
-        return head;
-    }
-
-    // head printed last
-    if( head != NULL) {
-        node_t *last = head;
-        while(last->next != NULL) {
-            last = last->next;
-        }
-        last->next = tmp;
-        return head;
-    }
-    // This was first node
-    return tmp;
+    // head printed first
+    tmp->next = head;
+    head = tmp;
+    return head;
 }
 
 node_t *find_node_by_value(node_t *head, int value) {
@@ -66,18 +50,22 @@ node_t *find_node_by_value(node_t *head, int value) {
 
 node_t *front(node_t *head) {
     if(head != NULL) {
-        if(ASC_ORDER == false) {
-            return head;
-        } else {
-            node_t *current = head;
-            while(current->next != NULL) {
-                current = current->next;
-            }
-            return current;
-        }
+        return head;
     }
 
     return NULL;
+}
+
+node_t *back(node_t *head) {
+    if(head == NULL) {
+        return NULL;
+    }
+
+    node_t *current = head;
+    while(current->next != NULL) {
+        current = current->next;
+    }
+    return current;
 }
 
 int main(void) {
@@ -105,6 +93,9 @@ int main(void) {
 
     node_t *front_node = front(head);
     printf("The front node is : %d \n", front_node == NULL ? -1 : front_node->value);
+
+    node_t *back_node = back(head);
+    printf("The back node is : %d \n", back_node == NULL ? -1 : back_node->value);
 
     return 0;
 }
