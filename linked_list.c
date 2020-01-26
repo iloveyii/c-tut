@@ -68,6 +68,28 @@ node_t *back(node_t *head) {
     return current;
 }
 
+node_t *at(node_t *head, int index) {
+    if(head == NULL) {
+        return NULL;
+    }
+
+    int counter = 0;
+    node_t *current = head;
+
+    while(current->next != NULL) {
+        if(counter == index) {
+            break;
+        }
+        current = current->next;
+        counter++;
+    }
+
+    if(counter == index) {
+        return current;
+    }
+    return NULL;
+}
+
 int main(void) {
     node_t *head = NULL;
     int value = 0;
@@ -97,8 +119,12 @@ int main(void) {
     node_t *back_node = back(head);
     printf("The back node is : %d \n", back_node == NULL ? -1 : back_node->value);
 
+    printf("Enter an index for at function: ");
+    scanf("%d", &value);
+    node_t *node_at = at(head, value);
+    printf("The node at(%d)is : %d \n", value, node_at == NULL ? -1 : node_at->value);
+
     return 0;
 }
-
 
 // RUN from cmd : g++ linked_list.c && ./a.out
