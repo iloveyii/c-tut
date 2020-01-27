@@ -114,6 +114,10 @@ int entry() {
         }
     }
 
+    for(int i = 0; i < 9999999; i++) {
+        v.add(i);
+    }
+
     printf("Enter an index for at function: ");
     scanf("%d", &value);
 
@@ -124,6 +128,8 @@ int entry() {
     printf("Enter a value to find : ");
     scanf("%d", &value);
     cout << "The find node is " << v.find(value) << endl;
+
+    return 0;
 }
 
 int main(void) {
